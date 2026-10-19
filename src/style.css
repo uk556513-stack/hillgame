@@ -1,0 +1,31 @@
+* { box-sizing: border-box; margin: 0; }
+html, body { height: 100%; background: #000; overflow: hidden; font-family: "Trebuchet MS", "Segoe UI", system-ui, sans-serif; }
+#app { position: relative; width: 100vw; height: 100vh; user-select: none; touch-action: none; }
+#scene { position: absolute; inset: 0; width: 100%; height: 100%; }
+.pill { position: absolute; background: rgba(10, 18, 40, .82); border: 1px solid rgba(255,255,255,.12); border-radius: 12px; color: #cfe0ff; backdrop-filter: blur(4px); }
+#stagebar { top: 14px; left: 14px; display: flex; align-items: center; gap: 8px; padding: 6px 10px; }
+#stagelabel { color: #ffb347; font-weight: 800; font-size: 12px; letter-spacing: .08em; background: rgba(255,179,71,.14); border-radius: 8px; padding: 5px 12px; }
+#hud { top: 14px; right: 14px; display: flex; align-items: center; gap: 18px; padding: 8px 12px; }
+#hud small { display: block; font-size: 9px; letter-spacing: .12em; color: #7f93c0; }
+#hud b { color: #fff; font-size: 15px; }
+.nitro i { display: block; width: 110px; height: 7px; border-radius: 6px; background: rgba(255,255,255,.12); margin-top: 6px; overflow: hidden; }
+.nitro u { display: block; height: 100%; width: 100%; background: linear-gradient(90deg, #2bb8ff, #61e6ff); }
+.pill button { background: rgba(255,255,255,.08); border: 1px solid rgba(255,255,255,.15); color: #fff; border-radius: 8px; width: 28px; height: 28px; cursor: pointer; }
+#hints { bottom: 12px; left: 50%; transform: translateX(-50%); padding: 7px 14px; font-size: 11px; white-space: nowrap; }
+kbd { background: #26407a; color: #fff; border-radius: 5px; padding: 2px 6px; font-weight: 700; margin: 0 2px 0 8px; }
+kbd.wide { background: #2f4d96; }
+.touch { position: absolute; bottom: 14px; display: flex; gap: 10px; }
+#touch-left { left: 14px; } #touch-right { right: 14px; }
+.touch button { width: 54px; height: 54px; border-radius: 14px; background: rgba(10,18,40,.8); border: 1px solid rgba(255,255,255,.18); color: #fff; font-size: 20px; }
+.touch button.on { background: #ff6a3c; }
+#modal { position: absolute; inset: 0; display: grid; place-items: center; background: rgba(8,14,40,.72); backdrop-filter: blur(6px); }
+#modal.hidden { display: none; }
+.card { text-align: center; width: min(380px, 90vw); padding: 26px 26px 22px; border-radius: 18px; background: rgba(12,16,30,.92); border: 2px solid #ff4a3d; box-shadow: 0 0 32px rgba(255,74,61,.45); }
+.card.win { border-color: #3be28a; box-shadow: 0 0 32px rgba(59,226,138,.4); }
+.tag { display: inline-block; font-size: 11px; font-weight: 800; letter-spacing: .1em; color: #ff8b82; border: 1px solid #ff4a3d; border-radius: 20px; padding: 4px 12px; }
+.card h1 { margin: 14px 0 8px; font-size: 32px; letter-spacing: .02em; color: #ff4a3d; }
+.card.win h1 { color: #3be28a; } .card.win .tag { color: #7dffbb; border-color: #3be28a; }
+.card p { color: #b9c8ec; font-size: 13px; line-height: 1.45; margin-bottom: 16px; }
+.card button { background: linear-gradient(#ff5a3c, #d6341f); color: #fff; font-weight: 800; border: 0; border-radius: 10px; padding: 10px 22px; cursor: pointer; letter-spacing: .04em; }
+@media (max-width: 800px) { #hints { display: none; } #hud { gap: 10px; } .nitro i { width: 60px; } }
+@media (pointer: fine) { .touch { opacity: .55; } }
